@@ -1,5 +1,40 @@
 # miniRT
-Small Ray Tracer (my 42 school project) 
+Small Ray Tracer (my 42 school project) (work only on macOS)
+
+This program read scene file and draw image in window or save this image in file using ray tracing algorithm.
+
+![ALT TEXT](images/stitch_minirt.jpg "Stitch rendered by my ray tracer")
+
+## How to use it
+
+Using ``make`` will create the ``miniRT`` executable.
+
+Simply run it with passing scene file as mandatory parameter:
+
+```
+./miniRT scene_file.rt
+```
+
+You can add --save option which save image in bmp format
+
+```
+./miniRT scene_file.rt --save
+```
+
+
+## Features of the program
+
+* Multithreading calculation of the image
+* Moving and rotation camera in realtime
+* Support specularity, transparancy and shiny characteristics for objects
+
+Example of transparancy characteristic:
+
+![ALT TEXT](images/glass_minirt.png "Example of transparancy characteristic")
+
+Example of specularity characteristic:
+
+![ALT TEXT](images/balls_minirt.png "Example of specularity characteristic")
 
 ## Scene format
 Each element first’s information is the type identifier (composed by one or two character(s)), followed by all specific information for each object in a strict order. You can write empty lines and object order is meaningless, just don't forget ambient and resolution. (If you dont like ambient light effect you can deactivate putting a 0 in ratio).
@@ -100,3 +135,10 @@ pl 0,25,0 0,1,0 100,200,30
 pl 0,-25,0 0,-1,0 0,160,0
 ```
 </div>
+
+### P.S.
+
+In this Ray Tracer you can render real nice not trivial objects using triangles polygons like this cat or Stitch on the top of readme file:
+
+
+![ALT TEXT](images/cat_minirt.bmp "Lowpoly cat")
